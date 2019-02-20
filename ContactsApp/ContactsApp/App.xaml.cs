@@ -1,4 +1,5 @@
 ﻿using ContactsApp.Views;
+using SimpleInjector;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -8,9 +9,15 @@ namespace ContactsApp
 {
     public partial class App : Application
     {
+        private static Container Container { get; set; }
+
         public App()
         {
             InitializeComponent();
+
+            // SimpleInjector IOC
+            Container = new Container();
+            Container.Verify();
 
             MainPage = new ContactsMenuView();
         }
