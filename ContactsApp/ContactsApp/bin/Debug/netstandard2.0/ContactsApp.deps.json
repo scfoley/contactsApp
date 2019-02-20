@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "77ac45fa75810ef28ecf58b94804c46f567cccb4"
+    "signature": "10f034bb3a44a79b1330efd83ab93a9427502927"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,17 +9,32 @@
     ".NETStandard,Version=v2.0/": {
       "ContactsApp/1.0.0": {
         "dependencies": {
+          "Fody": "4.0.2",
           "NETStandard.Library": "2.0.3",
+          "PropertyChanged.Fody": "2.6.0",
           "Xamarin.Forms": "3.4.0.1008975"
         },
         "runtime": {
           "ContactsApp.dll": {}
         }
       },
+      "Fody/4.0.2": {},
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "PropertyChanged.Fody/2.6.0": {
+        "dependencies": {
+          "Fody": "4.0.2",
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/PropertyChanged.dll": {
+            "assemblyVersion": "2.6.0.0",
+            "fileVersion": "2.6.0.0"
+          }
         }
       },
       "Xamarin.Forms/3.4.0.1008975": {
@@ -46,6 +61,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Fody/4.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vY77397mlY3qP1+i3G/MsWMmwS2j+WOzEj9JrZvINZLkjBF+KvIFypv3Ro8eBH87Awx4tFdEYWBOL1HYO2gh4g==",
+      "path": "fody/4.0.2",
+      "hashPath": "fody.4.0.2.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -59,6 +81,13 @@
       "sha512": "sha512-548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "PropertyChanged.Fody/2.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NSFceIyxFfVMctN3OWqZ7lL+ZcXq4uYFJ/XwXRhmMfhXTxs5mmg+UoRCLXPTqaXDJlldXDOSgnWTKTPqX5/0zQ==",
+      "path": "propertychanged.fody/2.6.0",
+      "hashPath": "propertychanged.fody.2.6.0.nupkg.sha512"
     },
     "Xamarin.Forms/3.4.0.1008975": {
       "type": "package",

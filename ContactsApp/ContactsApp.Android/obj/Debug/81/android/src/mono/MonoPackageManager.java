@@ -109,6 +109,7 @@ class MonoPackageManager_Resources {
 		"ContactsApp.Android.dll",
 		"ContactsApp.dll",
 		"FormsViewGroup.dll",
+		"PropertyChanged.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Runtime.dll",

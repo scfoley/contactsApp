@@ -34,7 +34,6 @@ C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\res\mipmap-xxxhdpi\l
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\R.cs.flag
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\R.txt
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\uploadflags.txt
-C:\ContactsApp\ContactsApp\ContactsApp\bin\Debug\netstandard2.0\ContactsApp.dll
 C:\ContactsApp\ContactsApp\ContactsApp.Android\bin\Debug\FormsViewGroup.pdb
 C:\ContactsApp\ContactsApp\ContactsApp.Android\bin\Debug\Mono.Android.pdb
 C:\ContactsApp\ContactsApp\ContactsApp.Android\bin\Debug\mscorlib.pdb
@@ -56,6 +55,8 @@ C:\ContactsApp\ContactsApp\ContactsApp.Android\bin\Debug\System.Runtime.Serializ
 C:\ContactsApp\ContactsApp\ContactsApp.Android\bin\Debug\System.ServiceModel.Internals.pdb
 C:\ContactsApp\ContactsApp\ContactsApp.Android\bin\Debug\System.Web.Services.pdb
 C:\ContactsApp\ContactsApp\ContactsApp.Android\bin\Debug\Mono.Security.pdb
+C:\ContactsApp\ContactsApp\ContactsApp.Android\bin\Debug\ContactsApp.dll.mdb
+C:\ContactsApp\ContactsApp\ContactsApp\bin\Debug\netstandard2.0\ContactsApp.dll
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\linksrc\ContactsApp.Android.pdb
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\linksrc\FormsViewGroup.pdb
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\linksrc\Mono.Android.pdb

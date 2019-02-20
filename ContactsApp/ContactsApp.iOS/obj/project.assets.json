@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "PropertyChanged.Fody/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "3.3.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Xamarin.Forms/3.4.0.1008975": {
         "type": "package",
         "compile": {
@@ -129,6 +145,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "PropertyChanged.Fody": "2.6.0",
           "Xamarin.Forms": "3.4.0.1008975"
         },
         "compile": {
@@ -140,6 +157,22 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "PropertyChanged.Fody/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "3.3.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Xamarin.Forms/3.4.0.1008975": {
         "type": "package",
         "compile": {
@@ -267,6 +300,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "PropertyChanged.Fody": "2.6.0",
           "Xamarin.Forms": "3.4.0.1008975"
         },
         "compile": {
@@ -278,6 +312,22 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "PropertyChanged.Fody/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "3.3.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Xamarin.Forms/3.4.0.1008975": {
         "type": "package",
         "compile": {
@@ -405,6 +455,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "PropertyChanged.Fody": "2.6.0",
           "Xamarin.Forms": "3.4.0.1008975"
         },
         "compile": {
@@ -416,6 +467,22 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "PropertyChanged.Fody/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "3.3.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Xamarin.Forms/3.4.0.1008975": {
         "type": "package",
         "compile": {
@@ -543,6 +610,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "PropertyChanged.Fody": "2.6.0",
           "Xamarin.Forms": "3.4.0.1008975"
         },
         "compile": {
@@ -555,6 +623,26 @@
     }
   },
   "libraries": {
+    "PropertyChanged.Fody/2.6.0": {
+      "sha512": "NSFceIyxFfVMctN3OWqZ7lL+ZcXq4uYFJ/XwXRhmMfhXTxs5mmg+UoRCLXPTqaXDJlldXDOSgnWTKTPqX5/0zQ==",
+      "type": "package",
+      "path": "propertychanged.fody/2.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/PropertyChanged.Fody.props",
+        "lib/net452/PropertyChanged.dll",
+        "lib/net452/PropertyChanged.xml",
+        "lib/netstandard1.0/PropertyChanged.dll",
+        "lib/netstandard1.0/PropertyChanged.xml",
+        "netclassicweaver/PropertyChanged.Fody.dll",
+        "netclassicweaver/PropertyChanged.Fody.xcf",
+        "netstandardweaver/PropertyChanged.Fody.dll",
+        "netstandardweaver/PropertyChanged.Fody.xcf",
+        "propertychanged.fody.2.6.0.nupkg.sha512",
+        "propertychanged.fody.nuspec"
+      ]
+    },
     "Xamarin.Forms/3.4.0.1008975": {
       "sha512": "036/h8HtzRFgTrfhY57IeHoYRsPTO2XTA6uUFdmZzw2QR1sdszfofhI9HrCJTRx6fCzmjPg5Cxk5chYrjKarNw==",
       "type": "package",

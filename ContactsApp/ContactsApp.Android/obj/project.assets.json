@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v8.1": {
+      "PropertyChanged.Fody/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "3.3.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Xamarin.Android.Arch.Core.Common/1.0.0.1": {
         "type": "package",
         "dependencies": {
@@ -345,6 +361,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "PropertyChanged.Fody": "2.6.0",
           "Xamarin.Forms": "3.4.0.1008975"
         },
         "compile": {
@@ -357,6 +374,26 @@
     }
   },
   "libraries": {
+    "PropertyChanged.Fody/2.6.0": {
+      "sha512": "NSFceIyxFfVMctN3OWqZ7lL+ZcXq4uYFJ/XwXRhmMfhXTxs5mmg+UoRCLXPTqaXDJlldXDOSgnWTKTPqX5/0zQ==",
+      "type": "package",
+      "path": "propertychanged.fody/2.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/PropertyChanged.Fody.props",
+        "lib/net452/PropertyChanged.dll",
+        "lib/net452/PropertyChanged.xml",
+        "lib/netstandard1.0/PropertyChanged.dll",
+        "lib/netstandard1.0/PropertyChanged.xml",
+        "netclassicweaver/PropertyChanged.Fody.dll",
+        "netclassicweaver/PropertyChanged.Fody.xcf",
+        "netstandardweaver/PropertyChanged.Fody.dll",
+        "netstandardweaver/PropertyChanged.Fody.xcf",
+        "propertychanged.fody.2.6.0.nupkg.sha512",
+        "propertychanged.fody.nuspec"
+      ]
+    },
     "Xamarin.Android.Arch.Core.Common/1.0.0.1": {
       "sha512": "UiWrWginObSSfmhKMTnRthhAWuH9yPhqP5ZCCCI9tTWl+XS/+sqcDjd84vP+dr1ve2h/AVZo9NgCbE1Xgktw2g==",
       "type": "package",

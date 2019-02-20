@@ -4,6 +4,7 @@ C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\android\assets\Forms
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\android\assets\Java.Interop.dll
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\android\assets\Mono.Android.dll
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\android\assets\mscorlib.dll
+C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\android\assets\PropertyChanged.dll
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\android\assets\System.Core.dll
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\android\assets\System.dll
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\android\assets\System.Xml.dll
@@ -42,4 +43,5 @@ C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\android\assets\Syste
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\android\assets\System.Runtime.Serialization.dll
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\android\assets\System.ServiceModel.Internals.dll
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\android\assets\System.Web.Services.dll
+C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\android\assets\System.Runtime.dll
 C:\ContactsApp\ContactsApp\ContactsApp.Android\obj\Debug\81\android\assets\Mono.Security.dll

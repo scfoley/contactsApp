@@ -55,3 +55,5 @@ C:\ContactsApp\ContactsApp\ContactsApp.iOS\obj\iPhoneSimulator\Debug\XamlC.stamp
 C:\ContactsApp\ContactsApp\ContactsApp.iOS\obj\iPhoneSimulator\Debug\ContactsApp.iOS.csproj.CopyComplete
 C:\ContactsApp\ContactsApp\ContactsApp.iOS\obj\iPhoneSimulator\Debug\ContactsApp.iOS.exe
 C:\ContactsApp\ContactsApp\ContactsApp.iOS\obj\iPhoneSimulator\Debug\ContactsApp.iOS.pdb
+C:\ContactsApp\ContactsApp\ContactsApp.iOS\bin\iPhoneSimulator\Debug\PropertyChanged.dll
+C:\ContactsApp\ContactsApp\ContactsApp.iOS\bin\iPhoneSimulator\Debug\ContactsApp.dll.mdb
