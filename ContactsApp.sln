@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsApp.Android", "Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsApp.iOS", "ContactsApp\ContactsApp.iOS\ContactsApp.iOS.csproj", "{559966EA-C2BB-4626-816F-CC23072C02AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsApp", "ContactsApp\ContactsApp\ContactsApp.csproj", "{E90D803D-0978-4688-9B23-5E11E4700A3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactsApp", "ContactsApp\ContactsApp\ContactsApp.csproj", "{E90D803D-0978-4688-9B23-5E11E4700A3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

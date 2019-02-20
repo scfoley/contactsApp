@@ -10,6 +10,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\BlackStar.png" />
+    <None Remove="Resources\YellowStar.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BlackStar.png" />
+    <EmbeddedResource Include="Resources\YellowStar.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Fody" Version="4.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
