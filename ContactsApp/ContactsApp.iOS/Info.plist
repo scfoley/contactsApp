@@ -34,5 +34,7 @@
     <string>ContactsApp</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
+    <key>NSContactsUsageDescription</key>
+    <string>Contacts permissions are needed in order to populate the contact list</string>
 </dict>
 </plist>
