@@ -19,7 +19,7 @@ namespace ContactsApp
             Container = new Container();
             Container.Verify();
 
-            MainPage = new ContactsMenuView();
+            MainPage = new NavigationPage(Container.GetInstance<ContactsMenuView>());
         }
 
         protected override void OnStart()
