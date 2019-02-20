@@ -6,5 +6,10 @@ namespace ContactsApp.ViewModels
 {
     public class ContactsMenuViewModel : BaseViewModel
     {
+        public ContactsMenuViewModel()
+        {
+            Title = "Contacts";
+        }
+
     }
 }
