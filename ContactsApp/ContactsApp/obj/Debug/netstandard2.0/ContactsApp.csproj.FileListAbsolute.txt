@@ -1,0 +1,12 @@
+C:\ContactsApp\ContactsApp\ContactsApp\bin\Debug\netstandard2.0\ContactsApp.deps.json
+C:\ContactsApp\ContactsApp\ContactsApp\bin\Debug\netstandard2.0\ContactsApp.dll
+C:\ContactsApp\ContactsApp\ContactsApp\bin\Debug\netstandard2.0\ContactsApp.pdb
+C:\ContactsApp\ContactsApp\ContactsApp\obj\Debug\netstandard2.0\ContactsApp.csprojAssemblyReference.cache
+C:\ContactsApp\ContactsApp\ContactsApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\ContactsApp\ContactsApp\ContactsApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\ContactsApp\ContactsApp\ContactsApp\obj\Debug\netstandard2.0\ContactsApp.csproj.CoreCompileInputs.cache
+C:\ContactsApp\ContactsApp\ContactsApp\obj\Debug\netstandard2.0\ContactsApp.AssemblyInfoInputs.cache
+C:\ContactsApp\ContactsApp\ContactsApp\obj\Debug\netstandard2.0\ContactsApp.AssemblyInfo.cs
+C:\ContactsApp\ContactsApp\ContactsApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\ContactsApp\ContactsApp\ContactsApp\obj\Debug\netstandard2.0\ContactsApp.dll
+C:\ContactsApp\ContactsApp\ContactsApp\obj\Debug\netstandard2.0\ContactsApp.pdb
