@@ -12,16 +12,19 @@ namespace ContactsApp.iOS.Services
 {
     public class ContactsService : IContactsService
     {
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task<IEnumerable<Contact>> GetContacts()
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+        #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             var response = new List<Contact>();
 
             var keysToFetch = new[] {
+                #pragma warning disable XI0002 // Notifies you from using newer Apple APIs when targeting an older OS version
                 CNContactKey.PhoneNumbers,
                 CNContactKey.GivenName,
-                CNContactKey.EmailAddresses
+                CNContactKey.EmailAddresses,
+                CNContactKey.FamilyName
+                #pragma warning restore XI0002 // Notifies you from using newer Apple APIs when targeting an older OS version
             };
 
             var containerId = new CNContactStore().DefaultContainerIdentifier;
@@ -34,13 +37,14 @@ namespace ContactsApp.iOS.Services
                     contactList = store.GetUnifiedContacts(predicate, keysToFetch, out var error);
                 }
 
-                //Assign the contact details to our view model objects  
                 response.AddRange(from item in contactList
                                   where item?.EmailAddresses != null
                                   select new Contact
                                   {
-                                      Number = item.PhoneNumbers[0].ToString(),
-                                      Name = item.GivenName,
+                                      Number = item.PhoneNumbers.Any() ? item.PhoneNumbers[0]?.Value?.ValueForKey(new Foundation.NSString("stringValue"))?.ToString() : null,
+                                      Name = item.GivenName + " " + item.FamilyName,
+                                      FirstName = item.GivenName,
+                                      LastName = item.FamilyName,
                                       Email = item.EmailAddresses.Select(m => m.Value.ToString()).FirstOrDefault()
                                   });
             }
