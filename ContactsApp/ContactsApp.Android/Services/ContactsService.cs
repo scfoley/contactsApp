@@ -29,13 +29,21 @@ namespace ContactsApp.Droid.Services
 
             foreach(var contact in contacts)
             {
+                var names = contact.Name.Split(' ');
+                string firstName = names.Any() ? names[0] : null;
+                string lastName = names.Count() > 1 ? string.Join(" ", names, 1, names.Length - 1) : null;
+
                 resultingContacts.Add(new Contact
                 {
                     Name = contact.Name,
+                    FirstName = firstName,
+                    LastName = lastName,
                     Email = contact.Email,
                     Number = contact.Number
                 });
             }
+
+            resultingContacts.Sort((x, y) => string.Compare(x.FirstName, y.FirstName));
 
             return resultingContacts;
         }

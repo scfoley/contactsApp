@@ -5,6 +5,21 @@
              x:Class="ContactsApp.Views.ContactsMenuView">
 
     <Grid>
+        <ListView
+            ItemsSource="{Binding Contacts}"
+            HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" FontSize="Large" Margin="25, 15, 0, 15"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+        
         <ActivityIndicator IsRunning="{Binding IsBusy}"
                            IsVisible="{Binding IsBusy}"
                            HeightRequest="40"

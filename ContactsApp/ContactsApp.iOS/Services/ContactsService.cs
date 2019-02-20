@@ -16,7 +16,7 @@ namespace ContactsApp.iOS.Services
         public async Task<IEnumerable<Contact>> GetContacts()
         #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
-            var response = new List<Contact>();
+            var resultingContacts = new List<Contact>();
 
             var keysToFetch = new[] {
                 #pragma warning disable XI0002 // Notifies you from using newer Apple APIs when targeting an older OS version
@@ -37,7 +37,7 @@ namespace ContactsApp.iOS.Services
                     contactList = store.GetUnifiedContacts(predicate, keysToFetch, out var error);
                 }
 
-                response.AddRange(from item in contactList
+                resultingContacts.AddRange(from item in contactList
                                   where item?.EmailAddresses != null
                                   select new Contact
                                   {
@@ -49,7 +49,9 @@ namespace ContactsApp.iOS.Services
                                   });
             }
 
-            return response;
+            resultingContacts.Sort((x, y) => string.Compare(x.FirstName, y.FirstName));
+
+            return resultingContacts;
         }
     }
 }
