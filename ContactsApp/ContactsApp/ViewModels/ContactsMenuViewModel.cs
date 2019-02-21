@@ -10,10 +10,11 @@ namespace ContactsApp.ViewModels
 {
     public class ContactsMenuViewModel : BaseViewModel
     {
-        private readonly IPlatformContactService _contactService;
-        public IEnumerable<Contact> Contacts { get; set; }
+        private readonly IContactService _contactService;
+        public IEnumerable<ContactList> ContactGroups { get; set; }
+        public IEnumerable<ContactList> Contacts { get; set; }
 
-        public ContactsMenuViewModel(IPlatformContactService contactService)
+        public ContactsMenuViewModel(IContactService contactService)
         {
             Title = "Contacts";
             _contactService = contactService;
@@ -22,7 +23,7 @@ namespace ContactsApp.ViewModels
         public override async Task OnAppearing()
         {
             IsBusy = true;
-            Contacts = await _contactService.GetContacts();
+            ContactGroups = await _contactService.GetContactsGroups();
             //IList<Contact> contacts = await CrossContactService.Current.GetContactListAsync();     
             IsBusy = false;
         }

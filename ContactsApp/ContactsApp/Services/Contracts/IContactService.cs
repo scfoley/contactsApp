@@ -6,9 +6,11 @@ namespace ContactsApp.Services.Contracts
 {
     public interface IContactService
     {
-        List<Contact> LoadedContacts { get; set; }
+        IEnumerable<Contact> LoadedContacts { get; set; }
+        Contact SelectedContact { get; set; }
+        Contact FavoriteContact { get; set; }
         void SaveFavoriteContact(Contact contact);
         Contact LoadFavoriteContact();
-        Task<List<ContactList>> GetContactsGroups();
+        Task<IEnumerable<ContactList>> GetContactsGroups(bool forceReload = false);
     }
 }

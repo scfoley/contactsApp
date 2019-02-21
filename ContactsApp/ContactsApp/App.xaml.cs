@@ -1,4 +1,5 @@
-﻿using ContactsApp.Services.Contracts;
+﻿using ContactsApp.Services;
+using ContactsApp.Services.Contracts;
 using ContactsApp.Views;
 using SimpleInjector;
 using System;
@@ -19,8 +20,8 @@ namespace ContactsApp
             // SimpleInjector IOC
             Container = new Container();
             Container.RegisterInstance(DependencyService.Get<IPlatformContactService>());
+            Container.RegisterSingleton<IContactService, ContactService>();
             Container.Verify();
-
             MainPage = new NavigationPage(Container.GetInstance<ContactsMenuView>());
         }
 
