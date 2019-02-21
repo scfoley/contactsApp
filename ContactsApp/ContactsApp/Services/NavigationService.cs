@@ -17,5 +17,13 @@ namespace ContactsApp.Services
                 await Application.Current.MainPage.Navigation.PushAsync(view);
             });
         }
+
+        public void DisplayAlert(string title, string message, string cancel)
+        {
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                await Application.Current.MainPage.DisplayAlert(title, message, cancel);
+            });
+        }
     }
 }

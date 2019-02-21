@@ -3,6 +3,7 @@ using ContactsApp.Services.Contracts;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace ContactsApp.ViewModels
@@ -11,6 +12,7 @@ namespace ContactsApp.ViewModels
     {
         // Services
         private IContactService _contactService;
+        private INavigationService _navigationService;
 
         // Commands
         public ICommand ToggleFavoriteCommand { get; set; }
@@ -21,9 +23,10 @@ namespace ContactsApp.ViewModels
 
         public string ContactHeader { get; set; }
 
-        public ContactViewModel(IContactService contactService)
+        public ContactViewModel(IContactService contactService, INavigationService navigationService)
         {
             _contactService = contactService;
+            _navigationService = navigationService;
 
             ToggleFavoriteCommand = new Command(ToggleFavorite);
             PhoneNumberTappedCommand = new Command(PhoneNumberTapped);
@@ -47,7 +50,14 @@ namespace ContactsApp.ViewModels
 
         private void PhoneNumberTapped()
         {
-            throw new NotImplementedException();
+            try
+            {
+                PhoneDialer.Open(SelectedContact.Number);
+            }
+            catch
+            {
+                _navigationService.DisplayAlert("Error", "Unable to Dial Number...", "OK");
+            }
         }
 
         public override async Task OnAppearing()
