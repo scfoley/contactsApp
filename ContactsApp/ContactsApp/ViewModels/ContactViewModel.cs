@@ -14,6 +14,7 @@ namespace ContactsApp.ViewModels
 
         // Commands
         public ICommand ToggleFavoriteCommand { get; set; }
+        public ICommand PhoneNumberTappedCommand { get; set; }
 
         // Properties
         public Contact SelectedContact { get; set; }
@@ -25,6 +26,7 @@ namespace ContactsApp.ViewModels
             _contactService = contactService;
 
             ToggleFavoriteCommand = new Command(ToggleFavorite);
+            PhoneNumberTappedCommand = new Command(PhoneNumberTapped);
 
             SelectedContact = _contactService.SelectedContact;
 
@@ -41,6 +43,11 @@ namespace ContactsApp.ViewModels
                 _contactService.ClearFavoriteContact();
 
             var favoriteContact = _contactService.LoadFavoriteContact();
+        }
+
+        private void PhoneNumberTapped()
+        {
+            throw new NotImplementedException();
         }
 
         public override async Task OnAppearing()
