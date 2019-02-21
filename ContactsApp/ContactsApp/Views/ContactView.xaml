@@ -5,9 +5,76 @@
                  xmlns:markupExtensions="clr-namespace:ContactsApp.MarkupExtensions"
                  xmlns:behaviors="clr-namespace:ContactsApp.Behaviors"
                  x:Class="ContactsApp.Views.ContactView">
+    
     <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+        <Frame CornerRadius="50" 
+               BackgroundColor="Orange"
+               HeightRequest="50"
+               WidthRequest="50"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Margin="20">
+            <Label Text="{Binding ContactHeader}" 
+                   TextColor="White"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+        </Frame>
+        <StackLayout BackgroundColor="Gray">
+            <Label Text="Name:"
                    VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
+                   FontSize="Large"
+                   TextColor="White" />
+        </StackLayout>
+        <Label Text="{Binding SelectedContact.Name}"
+               FontSize="Large"
+               VerticalOptions="Center"
+               Margin="10"/>
+        <StackLayout BackgroundColor="Gray">
+                <Label Text="Phone Number:"
+                       VerticalOptions="CenterAndExpand"
+                       FontSize="Large"
+                       TextColor="White"/>
+            </StackLayout>
+        <Label Text="{Binding SelectedContact.Number}"
+               FontSize="Large"
+               VerticalOptions="Center"
+               Margin="10"/>
+        <StackLayout BackgroundColor="Gray">
+                <Label Text="Email Address:"
+                       VerticalOptions="CenterAndExpand"
+                       FontSize="Large"
+                       TextColor="White"/>
+            </StackLayout>
+        <Label Text="{Binding SelectedContact.Email}"
+               FontSize="Large"
+               VerticalOptions="Center"
+               Margin="10"/>
+
+        <Frame CornerRadius="50"
+               BackgroundColor="Gray"
+               HeightRequest="50"
+               WidthRequest="50"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Margin="20">
+            <Grid>
+                <Image Source="{markupExtensions:ImageResource ContactsApp.Resources.BlackStar.png}"
+                       WidthRequest="25"
+                       HeightRequest="25"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       IsVisible="{Binding SelectedContact.IsFavorite, Converter={StaticResource InverseBoolConverter}}" />
+                <Image Source="{markupExtensions:ImageResource ContactsApp.Resources.YellowStar.png}"
+                       WidthRequest="25"
+                       HeightRequest="25"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       IsVisible="{Binding SelectedContact.IsFavorite}" />
+            </Grid>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ToggleFavoriteCommand}" />
+            </Frame.GestureRecognizers>
+        </Frame>
     </StackLayout>
 </local:BaseView>

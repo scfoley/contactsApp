@@ -14,7 +14,6 @@ namespace ContactsApp.Services
 
         public IEnumerable<Contact> LoadedContacts { get; set; }
         public Contact SelectedContact { get; set; }
-        public Contact FavoriteContact { get; set; }
 
         public ContactService(IPlatformContactService platformContactService)
         {
@@ -31,26 +30,30 @@ namespace ContactsApp.Services
                 LoadedContacts = await _platformContactService.GetContacts();
             }
 
+            foreach (var contact in LoadedContacts)
+            {
+                contact.IsFavorite = false;
+            }
+
             // Get favorite contact
             var favoriteContact = LoadFavoriteContact();
 
             // Update favorite contact in list
             if(favoriteContact != null)
             {
-                LoadedContacts.Select(x => x.IsFavorite = false);
                 var matchingContact = LoadedContacts.FirstOrDefault(x => x.Number == favoriteContact.Number);
 
                 if(matchingContact != null)
                 {
                     matchingContact.IsFavorite = true;
-                    FavoriteContact = matchingContact;
+                    favoriteContact = matchingContact;
 
                     var favoriteContactList = new ContactList
                     {
                         favoriteContact
                     };
 
-                    favoriteContactList.Heading = GetHeading(favoriteContact);
+                    favoriteContactList.Heading = "Favorite";
                     result.Add(favoriteContactList);
                 }
             }
@@ -74,7 +77,7 @@ namespace ContactsApp.Services
             return result;
         }
 
-        private string GetHeading(Contact contact)
+        public string GetHeading(Contact contact)
         {
             if(!string.IsNullOrEmpty(contact.Name))
             {
@@ -100,8 +103,19 @@ namespace ContactsApp.Services
 
         public void SaveFavoriteContact(Contact contact)
         {
+            LoadedContacts.Select(x => x.IsFavorite = false);
+
             string json = JsonConvert.SerializeObject(contact);
             Application.Current.Properties[contact.GetType().FullName] = json;
+            Application.Current.SavePropertiesAsync();
+        }
+
+        public void ClearFavoriteContact()
+        {
+            LoadedContacts.Select(x => x.IsFavorite = false);
+
+            Application.Current.Properties.Remove(typeof(Contact).FullName);
+            Application.Current.SavePropertiesAsync();
         }
     }
 }
