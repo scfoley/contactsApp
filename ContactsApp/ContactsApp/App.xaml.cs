@@ -2,7 +2,6 @@
 using ContactsApp.Services.Contracts;
 using ContactsApp.Views;
 using SimpleInjector;
-using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,6 +20,8 @@ namespace ContactsApp
             Container = new Container();
             Container.RegisterInstance(DependencyService.Get<IPlatformContactService>());
             Container.RegisterSingleton<IContactService, ContactService>();
+            Container.RegisterSingleton<IObjectService, ObjectService>();
+            Container.RegisterSingleton<INavigationService, NavigationService>();
             Container.Verify();
             MainPage = new NavigationPage(Container.GetInstance<ContactsMenuView>());
         }

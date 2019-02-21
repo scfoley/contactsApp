@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<local:BaseView xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ContactsApp.Views"
-             xmlns:markupExtensions="clr-namespace:ContactsApp.MarkupExtensions"
-             x:Class="ContactsApp.Views.ContactsMenuView">
+<local:BaseView 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ContactsApp.Views"
+    xmlns:markupExtensions="clr-namespace:ContactsApp.MarkupExtensions"
+    xmlns:behaviors="clr-namespace:ContactsApp.Behaviors"
+    x:Class="ContactsApp.Views.ContactsMenuView">
 
     <Grid>
         <ListView ItemsSource="{Binding ObservableContactLists}"
@@ -33,6 +35,10 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
+            <ListView.Behaviors>
+                <behaviors:EventToCommandBehavior EventName="ItemTapped"
+                                                  Command="{Binding ContactSelectedCommand}" />
+            </ListView.Behaviors>
         </ListView>
 
 
