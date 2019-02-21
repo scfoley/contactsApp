@@ -6,7 +6,37 @@
              x:Class="ContactsApp.Views.ContactsMenuView">
 
     <Grid>
-        <ListView
+        <ListView ItemsSource="{Binding ObservableContactLists}"
+                  IsGroupingEnabled="true">
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="Gray">
+                            <Label Text="{Binding Heading}"
+                                   FontSize="Medium"
+                                   TextColor="White"
+                                   VerticalOptions="CenterAndExpand"
+                                   Margin="20,0,0,0"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" 
+                                   FontSize="Large"
+                                   VerticalOptions="CenterAndExpand"
+                                   Margin="30,0,0,0"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <!--<ListView
             ItemsSource="{Binding Contacts}"
             HasUnevenRows="True">
             <ListView.ItemTemplate>
@@ -30,7 +60,7 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </ListView>-->
         
         <ActivityIndicator IsRunning="{Binding IsBusy}"
                            IsVisible="{Binding IsBusy}"
