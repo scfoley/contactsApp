@@ -10,10 +10,10 @@ namespace ContactsApp.ViewModels
 {
     public class ContactsMenuViewModel : BaseViewModel
     {
-        private readonly IContactsService _contactService;
+        private readonly IPlatformContactService _contactService;
         public IEnumerable<Contact> Contacts { get; set; }
 
-        public ContactsMenuViewModel(IContactsService contactService)
+        public ContactsMenuViewModel(IPlatformContactService contactService)
         {
             Title = "Contacts";
             _contactService = contactService;

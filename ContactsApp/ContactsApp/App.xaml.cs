@@ -18,7 +18,7 @@ namespace ContactsApp
 
             // SimpleInjector IOC
             Container = new Container();
-            Container.RegisterInstance(DependencyService.Get<IContactsService>());
+            Container.RegisterInstance(DependencyService.Get<IPlatformContactService>());
             Container.Verify();
 
             MainPage = new NavigationPage(Container.GetInstance<ContactsMenuView>());

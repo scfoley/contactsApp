@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace ContactsApp.Services.Contracts
 {
-    public interface IContactsService
+    public interface IPlatformContactService
     {
         Task<IEnumerable<Contact>> GetContacts();
     }

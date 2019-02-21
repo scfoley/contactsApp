@@ -20,7 +20,7 @@ using Xamarin.Forms;
 [assembly: Dependency(typeof(ContactsService))]
 namespace ContactsApp.Droid.Services
 {
-    public class ContactsService : IContactsService
+    public class ContactsService : IPlatformContactService
     {
         public async Task<IEnumerable<Contact>> GetContacts()
         {

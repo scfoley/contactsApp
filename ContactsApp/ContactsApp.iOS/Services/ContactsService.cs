@@ -10,7 +10,7 @@ using Xamarin.Forms;
 [assembly: Dependency(typeof(ContactsService))]
 namespace ContactsApp.iOS.Services
 {
-    public class ContactsService : IContactsService
+    public class ContactsService : IPlatformContactService
     {
         #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task<IEnumerable<Contact>> GetContacts()
